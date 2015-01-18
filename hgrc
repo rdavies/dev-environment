@@ -1,0 +1,7 @@
+[alias]
+s = status
+b = bookmarks
+ss = status --rev master
+d = diff
+diffs = diff -r master
+ds = diff -r master

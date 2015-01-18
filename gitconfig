@@ -1,0 +1,18 @@
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+
+[alias]
+  b = branch
+  s = status
+  co = checkout
+
+  d = diff
+  diffs = diff master
+  ds = diff master
+  diffc = diff --cached
+  dc = diff --cached
+
+  lg = log -200 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  sl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all --since='90 days ago'

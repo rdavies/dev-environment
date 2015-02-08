@@ -8,6 +8,9 @@ if [ "$TERM" != "screen-256color" ]; then
   tmux attach
 fi
 
+# path
+export PATH=$PATH:~/bin
+
 # PS1
 export PS1='\h:\w\$ '
 # export PS1='\u:\w\$ '

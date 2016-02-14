@@ -1,5 +1,5 @@
 " plugin manager
-" run ':PlugInstall' or ':PlugUpdate' or 'PlugUpgrade' for vim-plug itself
+" run ':PlugInstall' or ':PlugUpdate' or ':PlugUpgrade' for vim-plug itself
 call plug#begin('~/.vim/plugged')
   " tree explorer
 Plug 'scrooloose/nerdtree'

@@ -4,17 +4,15 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # automatically resume disconnected tmux session
-if [ "$TERM" != "screen-256color" ]; then
-  tmux attach
-fi
+# if [ "$TERM" != "screen-256color" ]; then
+#   tmux attach
+# fi
 
 # path
 export PATH=$PATH:~/bin
 
 # PS1
 export PS1='\h:\w\$ '
-# export PS1='\u:\w\$ '
-# export PS1='\u@\h:\w\$ '
 
 # default editor
 export EDITOR=vim

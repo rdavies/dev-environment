@@ -1,28 +1,21 @@
-" vundle plugin manager
-" run ':PluginInstall' or ':PluginUpdate'
-set nocompatible             " required
-filetype off                 " required
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-  " let vundle manage itself
-Plugin 'gmarik/Vundle.vim'
+" plugin manager
+" run ':PlugInstall' or ':PlugUpdate' or 'PlugUpgrade' for vim-plug itself
+call plug#begin('~/.vim/plugged')
   " tree explorer
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
     " toggle tree with ctrl+n
 map <C-n> :NERDTreeToggle<CR>
   " better status bar
-Plugin 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+    " vim-airline config
+set t_Co=256
+let g:airline_powerline_fonts = 1 " need powerline fonts installed
   " better vim/tmux pane navigation
-Plugin 'christoomey/vim-tmux-navigator'
-
-call vundle#end()
-filetype plugin indent on
-" end vundle
+Plug 'christoomey/vim-tmux-navigator'
+call plug#end()
 
 syntax on                    " syntax highlighting
 set number                   " line numbers
-" set relativenumber           " relative line numbers, combined with number = hybrid (vim 7.4)
 set directory=~/.vim/tmp//   " where to place swp files
 
 " moving cursor vertically won't skip wrapped lines
@@ -50,13 +43,13 @@ set incsearch                " enable incremental searching
 set nostartofline            " prevent cursor from changing cols when jumping lines
 set ruler                    " show cursor position in status bar
 set mouse=                   " mouse disabled, allows copy+paste
-set laststatus=2             " always show filename, used by bling/vim-airline
+set laststatus=2             " always show filename, used by vim-airline
 set noerrorbells             " disable annoying error chime
 set wildmenu                 " auto completion, e.g. :color <TAB>
 set backspace=2              " delete over line breaks (if not default)
+set timeoutlen=50            " time in ms waited for key code/key sequence
 
-" filetype plugin indent on           " enable build in filetype indentation
-  " (currently enabled with vundle setup)
+filetype plugin indent on    " enable build in filetype indentation
 
   " change settings when using python
 " autocmd FileType python setlocal sw=4 ts=4 sts=4
